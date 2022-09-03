@@ -33,8 +33,10 @@ fn main() {
     );
 
     let input_number: u128 = read_input();
-    let sector_count: u128 = sector_count(input_number); //Sector count is the amount of 3 number groups in the number eg. 1000000 would be 3 (1.000.000)
+    let mut number = input_number;
+    let mut sector_count: u128 = sector_count(input_number); //Sector count is the amount of 3 number groups in the number eg. 1000000 would be 3 (1.000.000)
 
+    
 }
 
 fn read_input() -> u128 {
