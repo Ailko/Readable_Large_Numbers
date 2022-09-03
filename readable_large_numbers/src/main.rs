@@ -1,13 +1,13 @@
-use std::io
+use std::io;
 
 fn main() {
-    const prefix_over_9 = (
+    let prefix_over_9 = (
         ("un", "duo", "tre", "quattuor", "quinqua", "se", "septe", "octo", "nove"),
         ("deci", "viginti", "triginta", "quadraginta", "quinquaginta", "sexaginta", "septuaginta", "octoginta", "nonaginta"),
         ("cent", "ducent", "trecent", "quadringent", "quingent", "sescent", "septingenti", "octingent", "nongent"),
     );
-    const prefix_under_10 = ("m", "b", "tr", "quadr", "quint", "sext", "sept", "oct", "non");
-    const modifiers = (
+    let prefix_under_10 = ("m", "b", "tr", "quadr", "quint", "sext", "sept", "oct", "non");
+    let modifiers = (
         (
             ("", "n"),
             ("s", "m"),
@@ -34,7 +34,7 @@ fn main() {
 
     let input_number: u128 = read_input();
     let sector_count: u128 = sector_count(input_number); //Sector count is the amount of 3 number groups in the number eg. 1000000 would be 3 (1.000.000)
-    
+
 }
 
 fn read_input() -> u128 {
@@ -43,8 +43,8 @@ fn read_input() -> u128 {
 
         let mut input_number = String::new();
 
-        let input_number: u128 = match io::stdin()
-            .read_line($mut input_number) {
+        match io::stdin()
+            .read_line(&mut input_number) {
                 Ok(_) => {
                     let input_number: u128 = match input_number.trim().parse() {
                         Ok(num) => num,
@@ -52,7 +52,7 @@ fn read_input() -> u128 {
                             println!("Please enter a number.");
                             continue 'read_input
                         }
-                    }
+                    };
                     break 'read_input input_number
                 },
                 Err(_) => {
@@ -73,7 +73,7 @@ fn number_length(input_number: u128) -> u128 {
     let mut count = 1;
     while input_number >= power {
         count += 1;
-        if let Some(new_power) = power * 10 {
+        if let Some(new_power) = power.checked_mul(10) {
             power = new_power;
         } else {
             break;
