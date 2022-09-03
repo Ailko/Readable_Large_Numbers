@@ -3,8 +3,8 @@ fn main() {
         ("un", "duo", "tre", "quattuor", "quinqua", "se", "septe", "octo", "nove"),
         ("deci", "viginti", "triginta", "quadraginta", "quinquaginta", "sexaginta", "septuaginta", "octoginta", "nonaginta"),
         ("cent", "ducent", "trecent", "quadringent", "quingent", "sescent", "septingenti", "octingent", "nongent"),
-    )
-    const prefix_under_10 = ("m", "b", "tr", "quadr", "quint", "sext", "sept", "oct", "non")
+    );
+    const prefix_under_10 = ("m", "b", "tr", "quadr", "quint", "sext", "sept", "oct", "non");
     const modifiers = (
         (
             ("", "n"),
@@ -28,6 +28,6 @@ fn main() {
             ("x", "m"),
             ("", ""),
         ),
-    )
+    );
 }
 
