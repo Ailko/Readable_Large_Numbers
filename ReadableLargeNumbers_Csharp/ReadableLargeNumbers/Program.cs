@@ -9,8 +9,8 @@ namespace Readable_numbers
         //Strings to append for names
         static public string[][] computelarger = new string[][] {
             new string[]{ "un", "duo", "tre", "quattuor", "quinqua", "se", "septe", "octo", "nove" },
-            new string[]{ "deci", "viginti", "triginta", "quadraginta", "quinquaginta", "sexaginta", "septuaginta", "octoginta", "nonaginta" },
-            new string[]{ "cent", "ducent", "trecent", "quadringent", "quingent", "sescent", "septingenti", "octingent", "nongent" } };
+            new string[]{ "deci", "viginti", "triginta", "quadraginta", "quinquaginta", "sexaginta", "septuaginta", "octoginta", "nonaginta" }, //over 10
+            new string[]{ "cent", "ducent", "trecent", "quadringent", "quingent", "sescent", "septingenti", "octingent", "nongent" } }; //over 100
 
         static public string[] smallerthan10 = new string[] { "m", "b", "tr", "quadr", "quint", "sext", "sept", "oct", "non" };
 
